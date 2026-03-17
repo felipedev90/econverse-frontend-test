@@ -4,11 +4,13 @@ import { Product } from "../../types/Product";
 interface ProductShowcaseProps {
   products: Product[];
   tabs?: string[];
+  onSetProduct: (product: Product | null) => void;
 }
 
 export default function ProductShowcase({
   products,
   tabs,
+  onSetProduct,
 }: ProductShowcaseProps) {
   return (
     <div>
@@ -16,7 +18,7 @@ export default function ProductShowcase({
       {tabs ? tabs.map((tab) => <span key={tab}>{tab}</span>) : "Ver todos"}
       {products.map((product, index) => (
         <div key={`${product.productName}-${index}`}>
-          <ProductCard product={product} />
+          <ProductCard product={product} onSetProduct={onSetProduct} />
         </div>
       ))}
     </div>

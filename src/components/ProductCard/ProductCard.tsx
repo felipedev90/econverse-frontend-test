@@ -1,7 +1,15 @@
 import { formatPrice } from "../../utils/utils";
 import { Product } from "../../types/Product";
 
-export default function ProductCard({ product }: { product: Product }) {
+interface ProductCardProps {
+  product: Product;
+  onSetProduct: (product: Product | null) => void;
+}
+
+export default function ProductCard({
+  product,
+  onSetProduct,
+}: ProductCardProps) {
   // Simulando um preço original para mostrar o desconto
   const originalPrice = product.price * 1.1;
 
@@ -13,7 +21,7 @@ export default function ProductCard({ product }: { product: Product }) {
       <p>{formatPrice(product.price)}</p>
       <p>ou 2x de {formatPrice(product.price / 2)}</p>
       <span>Frete grátis</span>
-      <button>Comprar</button>
+      <button onClick={() => onSetProduct(product)}>Comprar</button>
     </div>
   );
 }
