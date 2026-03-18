@@ -1,5 +1,6 @@
 import { formatPrice } from "../../utils/utils";
 import { Product } from "../../types/Product";
+import "./ProductCard.scss";
 
 interface ProductCardProps {
   product: Product;
@@ -31,7 +32,7 @@ export default function ProductCard({
           {formatPrice(product.price)}
         </p>
         <p className="product-card__installments">
-          ou 2x de {formatPrice(product.price / 2)}
+          ou 2x de {formatPrice(product.price / 2)} sem juros
         </p>
       </div>
 
