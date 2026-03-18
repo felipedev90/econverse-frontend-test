@@ -2,9 +2,10 @@
 $font-family-primary: "Poppins", sans-serif;
 
 /* PESO DA FONTE */
-$font-weight-light: 300;
-$font-weight-regular: 400;
 $font-weight-bold: 700;
+$font-weight-semi-bold: 600;
+$font-weight-regular: 400;
+$font-weight-light: 300;
 
 /* TAMANHO DAS FONTES - px / 16 = rem */
 $font-3xl: 3rem;
@@ -14,6 +15,7 @@ $font-lg: 1.87rem;
 $font-md: 1.25rem;
 $font-sm: 0.93rem;
 $font-xs: 0.75rem;
+$font-xxs: 0.62rem;
 
 /* CORES */
 $color-surface: #ffffff;
@@ -35,6 +37,8 @@ $color-text-tab: #3b3b3b;
 /* ESPAÇAMENTOS*/
 $card-width: 304px;
 $card-height: 500px;
+$spacing-3xl: 3rem;
+$spacing-2xl: 2.25rem;
 $spacing-xl: 2rem;
 $spacing-lg: 1.5rem;
 $spacing-md: 1rem;
