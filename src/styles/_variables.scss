@@ -27,14 +27,23 @@ $bg-tertiary-color: #f7ca11;
 $text-primary-color: #3f3f40;
 $text-secondary-color: #9f9f9f;
 
+/* CORES DO TAB */
+$color-lines: #dedede;
+$color-lines-tab: #bdbdbd;
+$color-text-tab: #3b3b3b;
+
 /* ESPAÇAMENTOS*/
 $card-width: 304px;
 $card-height: 500px;
+$spacing-xl: 2rem;
+$spacing-lg: 1.5rem;
 $spacing-md: 1rem;
 $spacing-sm: 0.75rem;
 $spacing-xs: 0.5rem;
 
 /* SOMBRAS */
+$shadow-text: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$shadow-line: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 $shadow-card: 0px 3px 19px 0px rgba(0, 0, 0, 0.22);
 
 /* BORDAS */
