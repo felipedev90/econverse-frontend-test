@@ -86,7 +86,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: $spacing-lg;
-    overflow-y: auto;
     padding: $spacing-md;
     scrollbar-width: none;
     &::-webkit-scrollbar {

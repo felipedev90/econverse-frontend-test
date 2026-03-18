@@ -36,22 +36,11 @@ export default function App() {
         tabs={tabItems}
         onSetProduct={setSelectedProduct}
       />
-      {selectedProduct && (
-        <ProductModal
-          product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-        />
-      )}
 
       <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
-      {selectedProduct && (
-        <ProductModal
-          product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-        />
-      )}
 
       <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
+
       {selectedProduct && (
         <ProductModal
           product={selectedProduct}
