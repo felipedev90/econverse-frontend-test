@@ -18,14 +18,13 @@ $font-xs: 0.75rem;
 $font-xxs: 0.62rem;
 
 /* CORES */
-$color-surface: #ffffff;
+$color-surface: #fff;
 $color-primary: #3442b5;
-$color-text-main: #000000;
+$color-text-main: #000;
 $color-text-muted: #808080;
 $color-border: #b1b1b1;
 $bg-secondary-color: #271c47;
 $bg-tertiary-color: #f7ca11;
-
 $text-primary-color: #3f3f40;
 $text-secondary-color: #9f9f9f;
 
@@ -37,7 +36,7 @@ $color-text-tab: #3b3b3b;
 /* SEARCH BAR */
 $search-bg-color: #f6f5f2;
 
-/* ESPAÇAMENTOS*/
+/* ESPAÇAMENTOS */
 $card-width: 304px;
 $card-height: 500px;
 $spacing-4xl: 4rem;
@@ -50,10 +49,10 @@ $spacing-sm: 0.75rem;
 $spacing-xs: 0.5rem;
 
 /* SOMBRAS */
-$shadow-text: 0px 4px 4px rgba(0, 0, 0, 0.25);
-$shadow-line: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-$shadow-card: 0px 3px 19px 0px rgba(0, 0, 0, 0.22);
-$shadow-navbar: 0px 8px 16px 0px rgba(57, 48, 19, 0.12);
+$shadow-text: 0px 4px 4px rgb(0 0 0 / 25%);
+$shadow-line: 0px 4px 4px 0px rgb(0 0 0 / 25%);
+$shadow-card: 0px 3px 19px 0px rgb(0 0 0 / 22%);
+$shadow-navbar: 0px 8px 16px 0px rgb(57 48 19 / 12%);
 
 /* BORDAS */
 $border-radius-md: 0.62rem;

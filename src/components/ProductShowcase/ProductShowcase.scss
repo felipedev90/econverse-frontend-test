@@ -15,11 +15,9 @@
     font-size: $font-lg;
     font-weight: $font-weight-bold;
     color: $color-primary;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin-bottom: $spacing-xs;
 
     &::before,
@@ -30,7 +28,6 @@
       background-color: $color-lines;
       margin: 0 $spacing-md;
       max-width: 360px;
-
       transform: translateY(-8px);
     }
   }
@@ -88,6 +85,7 @@
     gap: $spacing-lg;
     padding: $spacing-md;
     scrollbar-width: none;
+
     &::-webkit-scrollbar {
       display: none;
     }
