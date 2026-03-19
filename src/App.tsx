@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import fetchProducts from "./services/productFetch";
 import Categories from "./components/Categories/Categories";
 import HeroBanner from "./components/HeroBanner/HeroBanner";
+import Newsletter from "./components/Newsletter/Newsletter";
 import ProductModal from "./components/ProductModal/ProductModal";
 import PartnerBanners from "./components/PartnerBanners/PartnerBanners";
 import ProductShowcase from "./components/ProductShowcase/ProductShowcase";
@@ -47,8 +48,8 @@ export default function App() {
       />
       <PartnerBanners />
       <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
-      <PartnerBanners />
       <Brands />
+      <PartnerBanners />
       <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
       {selectedProduct && (
         <ProductModal
@@ -56,6 +57,7 @@ export default function App() {
           onClose={() => setSelectedProduct(null)}
         />
       )}
+      <Newsletter />
       <Footer />
     </>
   );
