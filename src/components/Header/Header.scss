@@ -1,4 +1,5 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .header {
   font-family: $font-family-primary;
@@ -7,9 +8,7 @@
   &__container,
   &__top-bar,
   &__nav-bar {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 $spacing-md;
+    @include container;
   }
 
   // TOP BAR
@@ -18,7 +17,7 @@
     justify-content: space-around;
     align-items: center;
     padding: $spacing-xs 0;
-    border-bottom: 1px solid $color-lines;
+    border-bottom: 1px solid $color-neutral-gray-200;
   }
 
   &__top-item {
@@ -26,11 +25,11 @@
     display: flex;
     align-items: center;
     gap: $spacing-xs;
-    color: $color-text-muted;
+    color: $color-neutral-gray-600;
   }
 
   &__top-item--highlight {
-    color: $color-primary;
+    color: $color-brand-blue;
   }
 
   // MAIN BAR
@@ -38,7 +37,7 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: $spacing-md 0;
-    border-bottom: 1px solid $color-lines;
+    border-bottom: 1px solid $color-neutral-gray-200;
   }
 
   &__container {
@@ -58,7 +57,7 @@
     flex: 1;
     display: flex;
     align-items: center;
-    background-color: $search-bg-color;
+    background-color: $color-neutral-gray-100;
     border-radius: $border-radius-md;
     padding: 0 $spacing-md;
     height: $spacing-3xl;
@@ -68,21 +67,19 @@
       border: none;
       background: transparent;
       font-size: $font-sm;
-      color: $color-text-main;
+      color: $color-brand-purple;
       outline: none;
 
       &::placeholder {
-        color: $text-secondary-color;
+        color: $color-neutral-gray-500;
       }
     }
 
     button {
+      @include flex-center;
       background: none;
       border: none;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
   }
 
@@ -93,16 +90,9 @@
   }
 
   &__icon-btn {
+    @include button-base;
+    @include flex-center;
     background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 
   // NAV BAR
@@ -126,19 +116,19 @@
     a {
       text-decoration: none;
       font-size: $font-xs;
-      color: $text-secondary-color;
+      color: $color-neutral-gray-500;
       font-weight: $font-weight-semi-bold;
       display: flex;
       align-items: center;
       gap: $spacing-xs;
 
       &:hover {
-        color: $color-primary;
+        color: $color-brand-blue;
       }
     }
 
     &--active a {
-      color: $color-primary;
+      color: $color-brand-blue;
     }
   }
 }
