@@ -8,6 +8,10 @@
   &__main {
     background-color: $color-neutral-gray-100;
     padding: $spacing-3xl 0;
+
+    @include mobile {
+      padding: $spacing-lg 0;
+    }
   }
 
   &__container {
@@ -15,6 +19,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      gap: $spacing-md;
+    }
   }
 
   &__company {
@@ -22,18 +31,34 @@
     display: flex;
     flex-direction: column;
     gap: $spacing-lg;
+
+    @include mobile {
+      flex: 1;
+      align-items: center;
+      text-align: center;
+      gap: $spacing-md;
+    }
   }
 
   &__logo {
     height: 40px;
     width: auto;
     align-self: flex-start;
+
+    @include mobile {
+      align-self: center;
+    }
   }
 
   &__description {
     font-size: $font-sm;
     color: $color-neutral-gray-600;
     line-height: 1.5;
+
+    @include mobile {
+      padding: 0 $spacing-md;
+      font-size: $font-xs;
+    }
   }
 
   &__socials {
@@ -59,6 +84,10 @@
     height: 120px;
     background-color: $color-neutral-gray-300;
     margin: 0 6rem;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__links {
@@ -66,12 +95,22 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: $spacing-md;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: $spacing-md;
+    }
   }
 
   &__link-group {
     display: flex;
     flex-direction: column;
     gap: $spacing-md;
+
+    @include mobile {
+      gap: $spacing-xs;
+    }
 
     ul {
       list-style: none;
@@ -80,6 +119,10 @@
       display: flex;
       flex-direction: column;
       gap: $spacing-sm;
+
+      @include mobile {
+        gap: $spacing-xs;
+      }
     }
 
     li a {
@@ -87,6 +130,10 @@
       font-size: $font-sm;
       color: $color-neutral-gray-600;
       transition: color 0.2s;
+
+      @include mobile {
+        font-size: $font-xs;
+      }
 
       &:hover {
         color: $color-brand-blue;
@@ -99,6 +146,10 @@
     font-weight: $font-weight-bold;
     color: $color-neutral-gray-800;
     margin: 0;
+
+    @include mobile {
+      font-size: $font-sm;
+    }
   }
 
   &__bottom {
@@ -120,5 +171,11 @@
 
   &__container-bottom {
     @include flex-center;
+
+    @include mobile {
+      flex-direction: column;
+      padding: 0 $spacing-md;
+      gap: $spacing-xs;
+    }
   }
 }

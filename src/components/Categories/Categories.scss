@@ -6,12 +6,23 @@
   padding: $spacing-2xl 0;
   margin-bottom: $spacing-lg;
 
+  @include mobile {
+    padding: $spacing-lg 0;
+    margin-bottom: 0;
+  }
+
   &__container {
     @include container;
     display: flex;
     justify-content: space-around;
     align-items: center;
     overflow-x: auto;
+
+    @include mobile {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $spacing-sm;
+    }
   }
 }
 
@@ -21,6 +32,10 @@
   align-items: center;
   gap: $spacing-lg;
   cursor: pointer;
+
+  @include mobile {
+    gap: $spacing-md;
+  }
 
   &__box {
     @include flex-center;

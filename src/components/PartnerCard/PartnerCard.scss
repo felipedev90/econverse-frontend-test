@@ -14,6 +14,10 @@
     display: flex;
     align-items: flex-end;
 
+    @include mobile {
+      height: 250px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -36,6 +40,11 @@
     align-items: flex-start;
     gap: $spacing-sm;
     max-width: 320px;
+
+    @include mobile {
+      max-width: 100%;
+      padding: $spacing-md;
+    }
   }
 
   &__title {
@@ -43,6 +52,10 @@
     font-size: $font-2xl;
     font-weight: $font-weight-bold;
     margin: 0;
+
+    @include mobile {
+      font-size: $font-xl;
+    }
   }
 
   &__description {
@@ -51,6 +64,10 @@
     line-height: 1.5;
     margin: 0;
     padding-bottom: $spacing-md;
+
+    @include mobile {
+      font-size: $font-xs;
+    }
   }
 
   &__button {
@@ -63,5 +80,9 @@
     border-radius: $border-radius-sm;
     padding: $spacing-md $spacing-2xl;
     text-transform: uppercase;
+
+    @include mobile {
+      padding: $spacing-sm $spacing-lg;
+    }
   }
 }
