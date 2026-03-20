@@ -4,12 +4,20 @@
 .brands {
   padding: $spacing-3xl 0;
 
+  @include mobile {
+    padding: $spacing-2xl 0;
+  }
+
   &__container {
     @include container;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: $spacing-2xl;
+
+    @include mobile {
+      gap: $spacing-md;
+    }
   }
 
   &__title {
@@ -18,14 +26,27 @@
     font-size: $font-lg;
     font-weight: $font-weight-bold;
     color: $color-brand-blue;
+
+    @include mobile {
+      font-size: $font-md;
+    }
   }
 
   &__list {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    gap: $spacing-md;
+    gap: $spacing-2xl;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+      padding: 0;
+      gap: $spacing-md;
+    }
   }
 
   &__item {
@@ -34,11 +55,16 @@
     height: 211px;
     background-color: $color-neutral-white;
     border-radius: 50%;
-    box-shadow: $shadow-card;
+    box-shadow: $shadow-navbar;
     cursor: pointer;
     transition:
       transform 0.3s ease,
       box-shadow 0.3s ease;
+
+    @include mobile {
+      width: 150px;
+      height: 150px;
+    }
 
     &:hover {
       transform: translateY(-5px);
